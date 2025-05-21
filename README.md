@@ -74,6 +74,12 @@ if __name__ == "__main__":
 - `NotificationService`: 알림 전송
 - `FoodDeliveryApp`: 주문 프로세스 관리
 
+### 코드 실행 결과
+메뉴 목록 표시
+장바구니 추가: 떡볶이 세트
+[결제] 15000원 처리 중...
+[알림] hllojune님, 주문이 완료되었습니다!
+
 ## 3. 모듈 평가
 
 - **PaymentGateway 클래스**  
