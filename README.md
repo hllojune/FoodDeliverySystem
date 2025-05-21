@@ -6,11 +6,11 @@
 ## 1. 시퀀스 다이어그램
 
 ### Mermaid 코드
-sequenceDiagram
-    actor User
-    participant App as 앱 인터페이스
-    participant Payment as 결제 게이트웨이
-    participant Notification as 알림 서비스
+sequenceDiagram  
+    actor User  
+    participant App as 앱 인터페이스  
+    participant Payment as 결제 게이트웨이  
+    participant Notification as 알림 서비스  
 
     User->>App: 앱 실행
     App->>User: 메뉴 목록 표시
@@ -30,23 +30,23 @@ sequenceDiagram
 ## 2. 샘플코드
 
 ### Python 코드
-class PaymentGateway:
-    def process_payment(self, amount: float) -> bool:
-        try:
-            print(f"[결제] {amount}원 처리 중...")
-            return True
-        except Exception as e:
-            print(f"[에러] 결제 실패: {e}")
-            return False
+class PaymentGateway:  
+    def process_payment(self, amount: float) -> bool:  
+        try:  
+            print(f"[결제] {amount}원 처리 중...")  
+            return True  
+        except Exception as e:  
+            print(f"[에러] 결제 실패: {e}")  
+            return False  
 
-class NotificationService:
-    def send_order_confirmation(self, user_id: str):
-        print(f"[알림] {user_id}님, 주문이 완료되었습니다!")
+class NotificationService:  
+    def send_order_confirmation(self, user_id: str):  
+        print(f"[알림] {user_id}님, 주문이 완료되었습니다!")  
 
-class FoodDeliveryApp:
-    def __init__(self):
-        self.payment = PaymentGateway()
-        self.notification = NotificationService()
+class FoodDeliveryApp:  
+    def __init__(self):  
+        self.payment = PaymentGateway()  
+        self.notification = NotificationService()  
 
     def browse_menu(self):
         print("메뉴 목록 표시")
@@ -62,12 +62,12 @@ class FoodDeliveryApp:
             print("[알림] 결제 실패로 주문이 취소되었습니다.")
             return False
 
-\# 사용자 시나리오
-if __name__ == "__main__":
-    app = FoodDeliveryApp()
-    app.browse_menu()
-    app.add_to_cart("떡볶이 세트")
-    app.checkout("hllonjune", 15000)
+\# 사용자 시나리오  
+if __name__ == "__main__":  
+    app = FoodDeliveryApp()  
+    app.browse_menu()  
+    app.add_to_cart("떡볶이 세트")  
+    app.checkout("hllonjune", 15000)  
 
 ### 코드 구조
 - `PaymentGateway`: 결제 처리
@@ -75,10 +75,10 @@ if __name__ == "__main__":
 - `FoodDeliveryApp`: 주문 프로세스 관리
 
 ### 코드 실행 결과
-메뉴 목록 표시
-장바구니 추가: 떡볶이 세트
-[결제] 15000원 처리 중...
-[알림] hllojune님, 주문이 완료되었습니다!
+메뉴 목록 표시  
+장바구니 추가: 떡볶이 세트  
+[결제] 15000원 처리 중...  
+[알림] hllojune님, 주문이 완료되었습니다!  
 
 ## 3. 모듈 평가
 
