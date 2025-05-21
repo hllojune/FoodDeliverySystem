@@ -4,7 +4,7 @@
 # 일상 속 소프트웨어 시스템: 음식 배달 앱
 
 ## 1. 시퀀스 다이어그램
-![시퀀스 다이어그램](diagram_link.png)
+![시퀀스 다이어그램](sequence_diagram.png)
 
 ## 2. 코드 구조
 - `FoodDeliveryApp`: 주문 프로세스 관리
