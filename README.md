@@ -70,9 +70,9 @@ if __name__ == "__main__":
     app.checkout("hyojun20210843", 15000)
 
 ### 코드 구조
-- `FoodDeliveryApp`: 주문 프로세스 관리
 - `PaymentGateway`: 결제 처리
 - `NotificationService`: 알림 전송
+- `FoodDeliveryApp`: 주문 프로세스 관리
 
 ## 3. 모듈 평가
 
@@ -106,4 +106,4 @@ if __name__ == "__main__":
 
 ---
 
-> 궁금한 점이나 수정할 부분이 있으면 언제든 말씀해 주세요!
+> 잘못된 점이나 수정할 부분이 있으면 언제든 말씀해 주세요!
