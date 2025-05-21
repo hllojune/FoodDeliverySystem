@@ -6,23 +6,7 @@
 ## 1. 시퀀스 다이어그램
 
 ### Mermaid 코드
-sequenceDiagram  
-    actor User  
-    participant App as 앱 인터페이스  
-    participant Payment as 결제 게이트웨이  
-    participant Notification as 알림 서비스  
-
-    User->>App: 앱 실행
-    App->>User: 메뉴 목록 표시
-    User->>App: 음식 선택
-    App->>User: 장바구니 확인 요청
-    User->>App: 주문 진행
-    App->>Payment: 결제 요청
-    Payment->>User: 결제 정보 입력
-    User->>Payment: 결제 완료
-    Payment->>App: 결제 성공 알림
-    App->>Notification: 주문 완료 데이터 전송
-    Notification->>User: SMS/푸시 알림 전송
+- [시퀀스 다이어그램 코드 전체 보기](./sequence_diagram.md)
 
 ### 시퀀스 다이어그램 이미지  
 ![시퀀스 다이어그램](sequence_diagram.png)
@@ -62,23 +46,12 @@ class FoodDeliveryApp:
             print("[알림] 결제 실패로 주문이 취소되었습니다.")
             return False
 
-\# 사용자 시나리오  
-if __name__ == "__main__":  
-    app = FoodDeliveryApp()  
-    app.browse_menu()  
-    app.add_to_cart("떡볶이 세트")  
-    app.checkout("hllonjune", 15000)  
+- [샘플 코드 전체 보기](./food_delivery_app.py)
 
 ### 코드 구조
 - `PaymentGateway`: 결제 처리
 - `NotificationService`: 알림 전송
 - `FoodDeliveryApp`: 주문 프로세스 관리
-
-### 코드 실행 결과
-메뉴 목록 표시  
-장바구니 추가: 떡볶이 세트  
-[결제] 15000원 처리 중...  
-[알림] hllojune님, 주문이 완료되었습니다!  
 
 ## 3. 모듈 평가
 
@@ -102,12 +75,6 @@ if __name__ == "__main__":
 - 이러한 구조 덕분에 프로그램이 이해하기 쉽고,  
   유지보수나 확장이 필요할 때도 편리합니다.
 
----
-
-## 4. 참고 파일 링크
-
-- [시퀀스 다이어그램 코드 전체 보기](./sequence_diagram.md)
-- [샘플 코드 전체 보기](./food_delivery_app.py)
 - [모듈 평가 전체 보기](./module_evaluation.md)
 
 ---
