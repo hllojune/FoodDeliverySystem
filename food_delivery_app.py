@@ -35,4 +35,4 @@ if __name__ == "__main__":
     app = FoodDeliveryApp()
     app.browse_menu()
     app.add_to_cart("떡볶이 세트")
-    app.checkout("hyojun20210843", 15000)
+    app.checkout("hllojune", 15000)
